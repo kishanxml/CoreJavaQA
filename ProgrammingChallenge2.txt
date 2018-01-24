@@ -1,0 +1,75 @@
+==================================================================>
+1)	Reverse of a string without reverse method.
+
+public static String reverse(String input){
+    char[] in = input.toCharArray();
+    int begin=0;
+    int end=in.length-1;
+    char temp;
+    while(end>begin){
+        temp = in[begin];
+        in[begin]=in[end];
+        in[end] = temp;
+        end--;
+        begin++;
+    }
+    return new String(in);
+}
+
+==================================================================>
+2)	Find a palindrome 
+
+  public static void checkPalindrome(String s)
+  {
+    String reverse = new StringBuffer(s).reverse().toString();
+ 
+   if (s.equals(reverse))
+      System.out.println("Yes");
+ 
+    else
+      System.out.println("No");
+  }
+ 
+
+==================================================================>
+3)      Please create a class for the below and send it,
+We have a table which has 4 columns as id, name, phone and address.
+You need to have a method which will return me the data.
+Create a method where you can hard code the data and print the details.
+The main aim of above example is how you use data structure.
+
+
+// Person bean which stores data related to Person Entity
+
+Class Person{
+ int id;
+ String name;
+ int phone;
+ String address;
+}
+
+
+//this class do operation on persone, we use Hashtable because it finds any person in 0(1) time using id as key.
+
+Class DataOperation{
+ Hashtable dataTable=new Hashtable(Integer,Person); // id=>persone pair in Hashtable
+
+ public boolean addPersone(Person p)
+ {
+   return dataTable.put(p.id,p);
+ }
+
+ public Person getPersone(int id){
+  dataTable.get(Integer.valueOf(id));
+ }
+
+ public static void main(String args[]){
+  ht.put(1,new Person(1,"john",2404224600,"New york NY"))
+  System.out.println(ht.get(1)); // by implementing toString in person we can print Persone Object.
+
+}
+
+}
+
+
+// Thank you for reading Programming Challenge-2, will see you in Part-2
